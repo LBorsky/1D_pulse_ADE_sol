@@ -3,7 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 
-def conc(x,T=1,Q=5,D=0.005,X_0=0,U=1,S=3):
+def conc(x,T=1,Q=5,D=0.005,X_0=0,U=1):
+    S = (2 * D * T) ** 0.5
     return Q / (4 * np.pi * D * T) ** 0.5 * np.exp(-((x - X_0 - U * T) ** 2) / (2 * S ** 2))
     
 xlist = np.linspace(0,100,num=1000)
