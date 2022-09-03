@@ -12,7 +12,6 @@ xlist = np.linspace(0,100,num=1000)
 # streamlit
 @st.cache
 st.title("1-D ADE solution, IC=pulse")
-st.title("1-D ADE solution, IC=pulse")
 t = st.slider("Time of sampling [s]", 0.1, 50.1, 5)
 ylist = conc(x=xlist,t=t)
 fig, ax = plt.subplots(figsize=(6,6))
