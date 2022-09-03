@@ -1,5 +1,4 @@
 # function
-
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
@@ -13,7 +12,7 @@ xlist = np.linspace(0,100,num=1000)
 st.title("1-D ADE solution, IC=pulse")
 t = st.slider("Time of sampling [sec]", 1, 50, 5)
 u = st.slider("Velocity of fluid [m/sec]", 0, 5, 2)
-ylist = conc(x=xlist,T=t)
+ylist = conc(x=xlist,T=t,U=u)
 fig, ax = plt.subplots(figsize=(6,6))
 plt.axis([0,50,0,50])
 ax.plot(xlist, ylist, color="blue", linewidth=2)
