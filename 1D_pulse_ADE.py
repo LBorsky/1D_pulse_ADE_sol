@@ -20,6 +20,6 @@ fig, ax = plt.subplots(figsize=(6,6))
 plt.axis([0,100,0,50])
 ax.plot(xlist, ylist, color="blue", linewidth=2)
 ax.set_xlabel('$x$ [m]')
-ax.set_ylabel('$C$ (mg/L)')
+ax.set_ylabel('$C$ (kg/m^3)')
 st.pyplot(fig)
 
