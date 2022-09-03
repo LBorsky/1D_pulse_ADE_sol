@@ -10,6 +10,7 @@ def conc(x,t=1,Q=5,D=0.001,x_0=0,U=1,sig=3):
 xlist = np.linspace(0,100,num=1000)
 
 # streamlit
+@st.cache
 st.title("1-D ADE solution, IC=pulse")
 st.title("1-D ADE solution, IC=pulse")
 t = st.slider("Time of sampling [s]", 0.1, 50.1, 5)
