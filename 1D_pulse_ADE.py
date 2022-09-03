@@ -12,7 +12,7 @@ xlist = np.linspace(0,100,num=1000)
 st.title("1-D ADE solution, IC=pulse")
 t = st.slider("Time of sampling [sec]", 1, 50, 5)
 q = st.slider("Initial mass/area of contaminant [kg/m^2]", 1, 10, 5)
-d = st.slider("Diffusion coefficient [m^2/sec]", 0.00001, 0.01, 0.001, step="float")
+d = st.slider("Diffusion coefficient [m^2/sec]", 0.01, 0.1, 0.01, step="float")
 u = st.slider("Velocity of fluid [m/sec]", 0, 5, 2)
 
 ylist = conc(x=xlist,T=t,U=u)
