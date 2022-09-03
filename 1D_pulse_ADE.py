@@ -1,9 +1,7 @@
 # function
-"""
-import matplotlib.pyplot as plt
-"""
-import numpy as np
 
+import numpy as np
+import matplotlib.pyplot as plt
 import streamlit as st
 st.title("1-D ADE solution, IC=pulse")
 
