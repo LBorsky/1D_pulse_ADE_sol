@@ -12,7 +12,7 @@ xlist = np.linspace(0,100,num=1000)
 # streamlit
 st.title("1-D ADE solution, IC=pulse")
 t = st.slider("Time of sampling [sec]", 1, 50, 5)
-q = st.slider("Initial mass/area of contaminant [kg/m^2]", 1, 10, 5)
+q = st.slider("Initial mass/area of contaminant [kg/m^2]", 1, 20, 10)
 u = st.slider("Velocity of fluid [m/sec]", 0, 5, 2)
 x_0 = st.slider("Location of contemination [m]", 0, 40, 0)
 # d = st.slider("Diffusion coefficient [m^2/s]", 0, 0.1, 0.01, step=float)
