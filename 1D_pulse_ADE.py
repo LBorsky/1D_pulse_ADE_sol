@@ -4,19 +4,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
 
-def conc(x,t=1,Q=5,D=0.001,x_0=0,U=1,sig=3):
+def conc(x,t=1,Q=5,D=0.005,x_0=0,U=1,sig=3):
     return Q / (4 * np.pi * D * t) ** 0.5 * np.exp(-((x - x_0 - U * t) ** 2) / (2 * sig ** 2))
     
 xlist = np.linspace(0,100,num=1000)
 
 # streamlit
 st.title("1-D ADE solution, IC=pulse")
-t = st.slider("Time of sampling [s]", 1, 50, 5)
+t = st.slider("Time of sampling [sec]", 1, 50, 5)
 ylist = conc(x=xlist,t=t)
 fig, ax = plt.subplots(figsize=(6,6))
-plt.axis([0,50,0,30])
-ax.plot(xlist, ylist)
-ax.set_xlabel('$t$ (sec)')
+plt.axis([0,50,0,50])
+ax.plot(xlist, ylist, color="blue", linewidth=2)
+ax.set_xlabel('$x$ [m]')
 ax.set_ylabel('$C$ (mg/L)')
 st.pyplot(fig)
 
