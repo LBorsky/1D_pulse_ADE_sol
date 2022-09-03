@@ -1,8 +1,9 @@
 # function
 """
 import matplotlib.pyplot as plt
-import numpy as np
 """
+import numpy as np
+
 import streamlit as st
 st.title("1-D ADE solution, IC=pulse")
 
